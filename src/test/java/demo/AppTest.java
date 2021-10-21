@@ -11,4 +11,12 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    @Test void appHasAGreeting2() {
+        assertNotNull("hello", "hello is not null");
+    }
+
+    @Test void appHasAGreeting3() {
+        assertNotNull("hello2", "hello2 is also not null");
+    }
 }
