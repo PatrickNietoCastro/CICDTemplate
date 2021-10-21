@@ -33,7 +33,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.          
+          echo test, and deploy your project.
+
+      # List directory content
+      - name: List directory content
+        run: ls -lisah
       
       - uses: ./action-a
         with:
@@ -47,6 +51,9 @@ jobs:
 
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+
+      - name: Set execution flag for ./gradlew
+        run: chmod +x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew build
