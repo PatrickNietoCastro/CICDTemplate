@@ -55,5 +55,8 @@ jobs:
       - name: Set execution flag for ./gradlew
         run: chmod +x ./gradlew
 
+      - name: Execute all test cases
+        run: ./gradlew cleanTest test
+
       - name: Build with Gradle
         run: ./gradlew build
