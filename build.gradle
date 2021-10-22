@@ -40,3 +40,11 @@ test {
     // Use junit platform for unit tests
     useJUnitPlatform()
 }
+
+// Show test results for each executed test
+// Intellij does not find candidates for method call events, but it still works.
+// Run from command line:
+// $ gradle cleanTest test
+test.testLogging {
+    events "passed", "skipped", "failed", "standardOut", "standardError"
+}
